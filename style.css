@@ -1,10 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
+
+html {
+    font-size: 20px;
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,54 +17,60 @@ body{
     width: 100%;
     background: #eef0f5;
 }
-.clock{
+
+.clock {
     background: linear-gradient(120deg, #e6e9ef, #eef0f5);
-    width: 450px;
-    height: 450px;
+    width: 22.5rem;
+    height: 22.5rem;
     border-radius: 50%;
-    box-shadow: -20px -20px 60px rgba(255,255,255,0.5),
-    20px 20px 20px -5px rgba(166,180,200,0.5);
+    box-shadow: -1rem -1rem 3rem rgba(255, 255, 255, 0.5),
+        1rem 1rem 1rem -5px rgba(166, 180, 200, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.wrapper{
-    width: 390px;
-    height: 390px;
+
+.wrapper {
+    width: 19.5rem;
+    height: 19.5rem;
     background: linear-gradient(to top, #eceef3, #f1f2f7);
     border-radius: 50%;
-    box-shadow: inset 10px 10px 10px rgba(166,180,200,0.5),
-    inset 20px 20px 40px rgba(166,180,200,0.7);
+    box-shadow: inset 0.5rem 0.5rem 0.5rem rgba(166, 180, 200, 0.5),
+        inset 1rem 1rem 2rem rgba(166, 180, 200, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-.wrapper label{
+
+.wrapper label {
     position: absolute;
     transform: rotate(calc(var(--i) * (360deg / 12)));
-    inset: 16px;
+    inset: 0.8rem;
     text-align: center;
 }
-.wrapper label span{
+
+.wrapper label span {
     transform: rotate(calc(var(--i) * (-360deg / 12)));
     display: inline-block;
-    font-size: 32px;
+    font-size: 1.6rem;
     font-weight: bold;
     color: #2d333e;
 }
-.center{
-    width: 25px;
-    height: 25px;
+
+.center {
+    width: 1.25rem;
+    height: 1.25rem;
     background: #646e82;
     border-radius: 50%;
     box-shadow: 1px 1px 3px #646e8260;
 }
-.center::after{
+
+.center::after {
     content: '';
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 0.75rem;
+    height: 0.75rem;
     background: #fd382d;
     top: 50%;
     left: 50%;
@@ -68,32 +79,58 @@ body{
     box-shadow: 1px 1px 3px #fd382d60;
     z-index: 4;
 }
+
 .pointer-second,
 .pointer-minute,
-.pointer-hour{
+.pointer-hour {
     position: absolute;
     bottom: 50%;
     transform-origin: bottom;
     /* transform: rotate(45deg); */
 }
-.pointer-second{
+
+.pointer-second {
     width: 4px;
-    height: 160px;
+    height: 7rem;
     background: #fd382d;
     box-shadow: 1px 1px 3px #fd382d60;
     z-index: 3;
 }
-.pointer-minute{
+
+.pointer-minute {
     width: 5px;
-    height: 130px;
+    height: 6.5rem;
     background: #2d333e;
     box-shadow: 1px 1px 3px #2d333e60;
     z-index: 2;
 }
-.pointer-hour{
+
+.pointer-hour {
     width: 6px;
-    height: 100px;
+    height: 5rem;
     background: #2d333e;
     box-shadow: 1px 1px 3px #2d333e60;
     z-index: 1;
+}
+
+
+@media (max-width: 800px) {
+    html {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 11px;
+    }
+
 }
